@@ -1,4 +1,5 @@
 # depslib dependency file v1.0
-1649962610 source:c:\users\david\onedrive\documentos\calculadora-how\main.cpp
+1652399445 source:c:\users\david\onedrive\documentos\calculadora-how\main.cpp
 	<iostream>
+	<math.h>
 

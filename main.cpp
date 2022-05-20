@@ -4,6 +4,7 @@
 #include <iostream>
 #include <math.h>
 #include <locale.h>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -11,9 +12,6 @@ int main()
 {
     bool executar = true;
     int opcao;
-    int numeroDecimal = 0;
-    int numeroBinario = 0;
-
     // Loop while para o programa continuar rodando até o usuário escolher a opção de parada
     while (executar) {
     setlocale(LC_ALL, "Portuguese");
@@ -22,7 +20,9 @@ int main()
     cout << "Opção 2 - Conversão Binário para Decimal" << endl;
     cout << "Opção 3 - Sair" << endl;
     cin >> opcao;
+    system("clear||cls");
     if (opcao == 1) {
+        int numeroDecimal = 0;
         int numeroBinario[8];
         cout << "Voce escolheu fazer a conversão de decimal para binário" << endl;
         cout << "Digite o número que deseja converter: " << endl;
@@ -45,13 +45,16 @@ int main()
         }
         cout << endl;
     } else if (opcao == 2) {
-        cout << "Voce escolheu fazer a conversão de binário para decimal" << endl;
+        int numeroDecimal = 0;
+        int numeroBinario;
+        cout << "Você escolheu fazer a conversão de binário para decimal" << endl;
         cout << "Digite o número que deseja converter: " << endl;
         cin >> numeroBinario;
         // Loop for que faz o número decimal receber ele elevado a potência do seu índice e soma com o módulo de 10 do número binário
-        for (int i = 0; numeroBinario > 0; i++) {
+        for (int i = 0; i <= 8; i++) {
             numeroDecimal = numeroDecimal + pow(2, i) * (numeroBinario % 10);
             numeroBinario = numeroBinario / 10;
+
         }
         cout << numeroDecimal << endl;
         cout << "O número em decimal é: " << numeroDecimal << endl;
